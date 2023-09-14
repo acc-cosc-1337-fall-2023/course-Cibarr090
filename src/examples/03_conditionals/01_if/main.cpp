@@ -6,6 +6,21 @@ using std::cin;
 
 int main() 
 {
+	auto hours = 0;
+	cout<<"Enter Hours: ";
+	cin>>hours;
+
+	auto result = is_overtime(hours);
+
+	if(result)
+	{
+		cout<<hours<<" is overtime\n";
+	}
+
+	else{
+		cout<<" is not overtime\n";
+	}
+
 	//create a bool variable named even
 	//create an int variable named value
 
