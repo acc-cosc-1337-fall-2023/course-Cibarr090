@@ -7,25 +7,32 @@ using std::string;
 int main()
 {
      string lang = "C++";
-    cout<<lang.capacity()<<"\n";
-    cout<<lang.size()<<"\n";
+     auto num = 5;
+      //create strings
+    string s0 = "C++";
+    cout<<s0<<"\n";
+
     cout<<lang<<"\n";
+    cout<<"Address of lang: "<<&lang<<"\n";
+    cout<<"Address of num: "<<&num<<"\n\n";
+    string s1 = "initial string";
+    cout<<s1<<"\n";
 
-    lang.append(" is cool");
-    cout<<lang.capacity()<<"\n";
-    cout<<lang.size()<<"\n";
-    cout<<lang<<"\n";
+    string s2(s1, 8, 3);
+    cout<<s2<<"\n";
 
-    lang.append("yeah");
-    cout<<lang.capacity()<<"\n";
-    cout<<lang.size()<<"\n";
-    cout<<lang<<"\n";
+    string s3("another character sequence", 12);
+    cout<<s3<<"\n";
 
-    lang.append(" ");
-    cout<<lang.capacity()<<"\n";
-    cout<<lang.size()<<"\n";
-    cout<<lang<<"\n"; 
+    string s4(10, 'x');
+    cout<<s4<<"\n";
 
+    string s5(10, 42);//10 *
+    cout<<s5<<"\n";
+
+    string s7("123456abac**(**)");
+    cout<<s7<<"\n";
+    
     cout<<lang[0]<<"\n";
     cout<<"Address of character at 0 index C: "<<static_cast<void*>(&lang[0])<<"\n";
     cout<<"Address of character at 0 index +: "<<static_cast<void*>(&lang[1])<<"\n";
