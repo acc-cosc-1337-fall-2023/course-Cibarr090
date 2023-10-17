@@ -1,38 +1,98 @@
 //add include statements
 #include "repetition.h"
 
+using std::cout; using std::cin;
+
 //add function(s) code here
 int factorial(int num)
 {
-   auto product = 0;
+   auto result = 1;
    
    while(num > 0)
    {
-      product = num * num;
+      result *= num;
       num--;
    }
 
-   return product;
+   return result;
 }
 
 int gcd(int num1, int num2)
 {
-   auto diff = 0;
-   
-   while(num1 == num2)
+    while(num1 != num2)
    {
       if(num1 < num2)
       {
-         num2 = num1;
+         auto n = num1;
+         num1 = num2;
+         num2 = n;
       }
-   }
-   {
-      if(num1 > num2)
+     if(num1 > num2)
       {
-         diff = num2 - num1;
+         num1 = num1 - num2;
       }
    }
   
 return num1;
 }
 
+void display_menu()
+{
+   cout<<"\n\n1-Factorial\n";
+   cout<<"2-Greatest Common Divisor\n";
+   cout<<"3-Exit\n";
+}
+
+
+void run_menu()
+{
+   auto option = 0;
+   auto choice = 'n';
+
+   do
+   {
+      display_menu();
+      cout<<"Enter menu option: ";
+      cin>>option;
+      handle_menu_option(option);
+      if(option == 3)
+      {
+         cout<<"are you sure you want to exit? ";
+         cin>>choice;
+      }
+      if(choice == 'n' || choice == 'N')
+      {
+         option = 0;
+      }
+      
+   }while (option !=3);
+         
+}
+
+void handle_menu_option(int option)
+{
+   auto num = 0, num1 = 0;
+   if(option == 1)
+   {
+      cout<<"Enter a number: ";
+      cin>>num;
+      cout<<"Factorial: "<<factorial(num);
+   }
+   else if(option == 2)
+   {
+      cout<<"Enter a number: ";
+      cin>>num;
+
+      cout<<"Enter a second number: ";
+      cin>>num1;
+      cout<<"GCD is: "<<gcd(num, num1);
+   }
+   else if(option == 3)
+   {
+      cout<<"exit chosen\n";
+   }
+   else
+   {
+      cout<<"Invalid Option\n";
+   }
+}
