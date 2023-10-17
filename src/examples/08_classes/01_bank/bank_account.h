@@ -5,6 +5,9 @@
 
 class BankAccount
 {
+
+friend void show_balance(const BankAccount& account);
+
 public://access specifier-other code can access these functions
     //constructor
     BankAccount(){get_balance_from_db();}//no parameters=default constructor
