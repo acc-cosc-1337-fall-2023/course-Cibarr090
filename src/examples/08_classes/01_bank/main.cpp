@@ -5,8 +5,8 @@ using std::cout;
 int main()
 {
 	say_hello();
-	BankAccount account(50);//create a variable/an object
-	//BankAccount account;//create a variable/an object ---customer 1
+	BankAccount account;//create a variable/an object ---customer 1
+	account.deposit(250);
 
 	cout<<"Balance: "<<account.get_balance()<<"\n";
 
