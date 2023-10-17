@@ -1,7 +1,7 @@
 //write include statement for decisions header
 #include "decisions.h"
 
-using std::cout; using std::string;
+using std::cout; using std::string; using std::cin;
 
 //Write code for function(s) code here
 string get_letter_grade_using_if(int grade)
@@ -80,10 +80,14 @@ void handle_Main_menu_option(int grade)
     switch(grade)
     {
     case 1:
-        get_letter_grade_using_if(grade);
+        cout<<"enter a grade: ";
+        cin>>grade;
+        cout<<"Letter grade: "<<get_letter_grade_using_if(grade)<<"\n";
         break;
     case 2:
-        get_letter_grade_using_switch(grade);
+        cout<<"enter a grade: ";
+        cin>>grade;
+        cout<<"Letter grade: "<<get_letter_grade_using_switch(grade)<<"\n";
         break;
     case 3:
         cout<<"program will exit\n";
