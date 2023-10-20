@@ -9,6 +9,7 @@ class SavingsAccount: public BankAccount //inherit from Bamkaccount
 public:
     SavingsAccount(){/*EMPTY CODE BLOCK*/}
     SavingsAccount(int b) : BankAccount(b) {/**EMPTY CODE BLOCK*/}
+    int get_balance() const {return BankAccount::get_balance() + 5;}
 };
 
 #endif
