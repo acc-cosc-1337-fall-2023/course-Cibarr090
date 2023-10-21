@@ -24,6 +24,7 @@ int main()
 			cin>>position;
 			game.mark_board(position);
 			game.display_board();
+			game.get_winner();
 		}
 
 		cout<<"Type y to Continue or n to exit? ";
