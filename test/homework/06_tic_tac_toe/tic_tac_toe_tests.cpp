@@ -54,6 +54,7 @@ TEST_CASE("Test win by first column")
 {
 	TicTacToe game;
 	game.get_player() = 1,4,7;
+	
 
 	game.start_game("X");
 
